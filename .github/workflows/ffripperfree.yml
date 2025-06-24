@@ -15,8 +15,11 @@ on:
         description: 'Enter Powershell code from crd website' 
         required: true
       guestacc:
-        type: bool
-        default: False
+        type: choice
+        default: 'False'
+        options:
+        - 'False'
+        - 'True'
       guestpass:
         required: False
       time:
