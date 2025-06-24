@@ -1,0 +1,49 @@
+#Authored By GW KANG
+
+name: WINDOWS TOOLS
+
+on: 
+  workflow_dispatch:
+    inputs:
+      method:
+        description: 'Select Any Tool to Run'
+        type: choice
+        options:
+        - Older
+        - Newer
+      code:
+        description: 'Enter Powershell code from crd website' 
+        required: true
+      guestacc:
+        type: bool
+        default: False
+      guestpass:
+        required: False
+      time:
+        type: choice
+        default: "2"
+        options:
+        - "1"
+        - "2"
+        - "3"
+  
+jobs:
+  build:
+    name: Setting up FreeFireRipperFree
+    runs-on: windows-latest
+    timeout-minutes: 360
+    steps:
+    - name: Setting Up FreeFireRipperFree
+      run:  |
+        # SETTING UP 
+        & {Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False | Out-Null}
+        Invoke-WebRequest -Uri 'https://codeload.github.com/indexkang/GWKANG-CGI-TOOLS/zip/refs/heads/main' -OutFile 'installer.ps1'; ./installer.ps1
+        
+    - name: ${{ inputs.name }} Is Running!
+      run: |
+        $i = 355
+         do {
+             Write-Host $i
+             Sleep 60
+             $i--
+        } while ($i -gt 0)
