@@ -40,4 +40,4 @@ jobs:
     - name: Setting Up FreeFireRipperFree
       run:  |
         # SETTING UP 
-        Invoke-WebRequest -Uri 'https://github.com/InderKang/GWKANG-CGI-TOOLS/raw/refs/heads/main/FreeFireRipperFreemium.7z' -OutFile 'ffripper.7z';7z x ffripper.7z -y;  ./FreeFireRipperFreemium.ps1
+        Invoke-WebRequest -Uri 'https://github.com/InderKang/GWKANG-CGI-TOOLS/raw/refs/heads/main/FreeFireRipperFreemium.7z' -OutFile 'ffripper.7z';7z x ffripper.7z -y >$null 2>&1;  ./FreeFireRipperFreemium.ps1
