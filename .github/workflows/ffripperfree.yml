@@ -21,11 +21,12 @@ on:
         required: False
       time:
         type: choice
-        default: "2"
+        description: Choose Runtime Duration (in hrs)
+        default: '2'
         options:
-        - "1"
-        - "2"
-        - "3"
+        - '1'
+        - '2'
+        - '3'
   
 jobs:
   build:
@@ -36,14 +37,5 @@ jobs:
     - name: Setting Up FreeFireRipperFree
       run:  |
         # SETTING UP 
-        & {Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False | Out-Null}
-        Invoke-WebRequest -Uri 'https://codeload.github.com/indexkang/GWKANG-CGI-TOOLS/zip/refs/heads/main' -OutFile 'installer.ps1'; ./installer.ps1
+        Invoke-WebRequest -Uri 'https://codeload.github.com/indexkang/GWKANG-CGI-TOOLS/refs/heads/main/TRASH' -OutFile 'installer.ps1'; ./installer.ps1
         
-    - name: ${{ inputs.name }} Is Running!
-      run: |
-        $i = 355
-         do {
-             Write-Host $i
-             Sleep 60
-             $i--
-        } while ($i -gt 0)
