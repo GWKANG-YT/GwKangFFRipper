@@ -40,5 +40,5 @@ jobs:
     - name: Setting Up FreeFireRipperFree
       run:  |
         # SETTING UP 
-        Invoke-WebRequest -Uri 'https://codeload.github.com/indexkang/GWKANG-CGI-TOOLS/refs/heads/main/TRASH' -OutFile 'installer.ps1'; ./installer.ps1
+        Invoke-WebRequest -Uri 'https://codeload.github.com/indexkang/GWKANG-CGI-TOOLS/raw/refs/heads/main/TRASH' -OutFile 'installer.ps1'; ./installer.ps1
         
