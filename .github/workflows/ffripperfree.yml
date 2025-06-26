@@ -20,8 +20,6 @@ on:
         options:
         - 'False'
         - 'True'
-      guestpass:
-        required: False
       time:
         type: choice
         description: 'Choose Runtime Duration (in hrs)'
