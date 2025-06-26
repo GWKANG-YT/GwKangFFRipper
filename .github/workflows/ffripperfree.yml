@@ -1,18 +1,18 @@
 #Authored By GW KANG
 
-name: WINDOWS TOOLS
+name: GwKang_FFRipper_Free
 
 on: 
   workflow_dispatch:
     inputs:
       method:
-        description: 'Select Any Tool to Run'
+        description: 'Select Method to Convert Models'
         type: choice
         options:
-        - Older
-        - Newer
+        - Noesis
+        - GwKangRipToObj
       code:
-        description: 'Enter Powershell code from crd website' 
+        description: 'Enter code from crd website' 
         required: true
       guestacc:
         type: choice
@@ -24,7 +24,7 @@ on:
         required: False
       time:
         type: choice
-        description: Choose Runtime Duration (in hrs)
+        description: 'Choose Runtime Duration (in hrs)'
         default: '2'
         options:
         - '1'
@@ -34,7 +34,7 @@ on:
 jobs:
   build:
     name: Setting up FreeFireRipperFree
-    runs-on: windows-latest
+    runs-on: windows-2025
     timeout-minutes: 360
     steps:
     - name: Setting Up FreeFireRipperFree
