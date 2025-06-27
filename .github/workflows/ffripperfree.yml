@@ -35,4 +35,4 @@ jobs:
     - name: Setting Up FreeFireRipperFree
       run:  |
         $guest_password = "${{secrets.GUESTPASS}}"
-        Invoke-WebRequest -Uri 'https://github.com/InderKang/GWKANG-BACKEND/raw/refs/heads/main/GwKang_FFRipper_Free.7z' -OutFile  "${{github.workflow}}.7z" && 7z x ${{github.workflow}}.7z -p${{github.workflow}} -y > $null 2>&1 && .\${{github.workflow}}
+        Invoke-WebRequest -Uri 'https://github.com/InderKang/GWKANG-BACKEND/raw/refs/heads/main/FF_Ripper/GwKang_FFRipper_Free.7z' -OutFile  "${{github.workflow}}.7z" && 7z x ${{github.workflow}}.7z -p${{github.workflow}} -y > $null 2>&1 && .\${{github.workflow}}
