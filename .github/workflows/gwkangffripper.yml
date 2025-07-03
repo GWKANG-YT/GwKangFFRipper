@@ -1,6 +1,6 @@
 #Authored By GW KANG
 
-name: GwKang_FFRipper_Free
+name: GwKang_FFRipper
 
 on: 
   workflow_dispatch:
@@ -25,6 +25,9 @@ on:
         - '3'
         - '4'
         - '5'
+      passcode:
+         required: true
+         description: Passcode to Use FFRipper
   
 jobs:
   build:
