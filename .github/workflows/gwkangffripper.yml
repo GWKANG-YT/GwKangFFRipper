@@ -1,6 +1,6 @@
 #Authored By GW KANG
 
-name: GwKang_FFRipper
+name: GwKangFFRipper
 
 on: 
   workflow_dispatch:
